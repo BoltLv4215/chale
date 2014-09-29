@@ -31,46 +31,20 @@ function pullDownAction () {
  * 滚动翻页 （自定义实现此方法）
  * myScroll.refresh();		// 数据加载完成后，调用界面更新方法
  */
-window.cnt = 0
 function pullUpAction () {
-$("#pullUp").hide();myScroll.refresh();
-	
-	//showImg(window.cnt);	
-		// 数据加载完成后，调用界面更新方法 Remember 
+	$("#pullUp").hide();
+	myScroll.refresh();
 }
-// 1-10 是第一部分
-// 11-21
-//22-30
-//31-38
-//39-46
-//47-54
-//55-62
-//63-71
-//72-81
+
 function showTr(start,end){
 	$("tr td img").each(function(k,v){
-		if(k <= end && k >= start){
 			$(v).attr({"src":$(v).attr("data_src")});
 			$(v).parent().parent().show();
-		}
 	})
-	
-	window.cnt++;
 }
-function hideTr(){
-	$("tr td img").each(function(k,v){
-		if(k >= 16){
-			$(v).parent().parent().hide();
-		}
-	})
-	
-}
+
 $(function(){
-
 	showTr(0,35);
-	myScroll.refresh();
-	//$('.fancybox').fancybox();
-
 })
 /**
  * 初始化iScroll控件
@@ -126,7 +100,7 @@ function loaded() {
 		}
 	});
 	
-	setTimeout(function () { document.getElementById('wrapper').style.left = '0'; }, 800);
+	
 }
 
 //初始化绑定iScroll控件 
