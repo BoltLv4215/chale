@@ -33,14 +33,7 @@ function pullDownAction () {
  */
 window.cnt = 0
 function pullUpAction () {
-	console.log(window.cnt);
-	if(window.cnt<=1){
-		switch(window.cnt){
-		
-			case 1: showTr(18,35);$("#pullUp").hide();break;
-		}
-		setTimeout(function(){myScroll.refresh();},100)
-	}
+$("#pullUp").hide();myScroll.refresh();
 	
 	//showImg(window.cnt);	
 		// 数据加载完成后，调用界面更新方法 Remember 
@@ -73,9 +66,9 @@ function hideTr(){
 	
 }
 $(function(){
-	hideTr();
-	showTr(0,17);
-	setTimeout(function(){myScroll.refresh();},100)
+
+	showTr(0,35);
+	myScroll.refresh();
 	//$('.fancybox').fancybox();
 
 })
