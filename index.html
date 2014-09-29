@@ -34,10 +34,20 @@ function pullDownAction () {
 window.cnt = 0
 function pullUpAction () {
 	console.log(window.cnt);
+<<<<<<< HEAD
 	if(window.cnt<=1){
 		switch(window.cnt){
 		
 			case 1: showTr(18,35);$("#pullUp").hide();break;
+=======
+	if(window.cnt<=5){
+		switch(window.cnt){
+			case 1: showTr(6,11);break;
+			case 2: showTr(12,17);break;
+			case 3: showTr(18,23);break;
+			case 4: showTr(24,29);break;
+			case 5: showTr(30,35);$("#pullUp").hide();break;
+>>>>>>> f79e81af283e3f7027b22e7c3680e96bb27e1228
 		}
 		setTimeout(function(){myScroll.refresh();},100)
 	}
@@ -74,7 +84,11 @@ function hideTr(){
 }
 $(function(){
 	hideTr();
+<<<<<<< HEAD
 	showTr(0,17);
+=======
+	showTr(0,5);
+>>>>>>> f79e81af283e3f7027b22e7c3680e96bb27e1228
 	setTimeout(function(){myScroll.refresh();},100)
 	//$('.fancybox').fancybox();
 
